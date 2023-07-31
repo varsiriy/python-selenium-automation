@@ -35,8 +35,5 @@ assert expected_result1 == actual_result1, f'Expected {expected_result1} did not
 print('Test case 1 passed')
 
 email_input_field = driver.find_element(By.ID, 'ap_email')
-expected_result2 = 'Email input field is presented'
-actual_result2 = 'Email input field is presented' if email_input_field.is_displayed() else 'Email inpit field is NOT presented'
-
-assert expected_result2 == actual_result2, f'Expected {expected_result2} did not match Actual {actual_result2}'
+assert email_input_field.is_displayed(), f'The element is not displayed'
 print('Test case 2 passed')
