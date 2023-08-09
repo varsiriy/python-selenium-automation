@@ -25,7 +25,6 @@ driver.maximize_window()
 driver.get('http://www.amazon.com/')
 
 # click Orders
-
 driver.find_element(By.XPATH, "//span[text()='& Orders' and @ class='nav-line-2']"). click()
 
 expected_result1 = 'Sign in'
@@ -37,3 +36,7 @@ print('Test case 1 passed')
 email_input_field = driver.find_element(By.ID, 'ap_email')
 assert email_input_field.is_displayed(), f'The element is not displayed'
 print('Test case 2 passed')
+
+ ## Or   driver.find_element(By.ID, 'ap_email')     This is it. No assert needed
+
+driver.quit()
