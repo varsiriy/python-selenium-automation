@@ -1,21 +1,10 @@
 
 from behave import given, when, then
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 from time import sleep
 
- # create a new Chrome browser instance
 
-service = Service(executable_path=r'C:\Users\varsi\python-selenium-automation\chromedriver.exe')
-driver = webdriver.Chrome(service=service)
-driver.maximize_window()
-
-#driver.get('http://www.amazon.com/')
-
-
-# click Orders
+# Click Orders
 @when('Click orders')
 def click_orders(context):
     context.driver.find_element(By.XPATH, "//span[text()='& Orders' and @ class='nav-line-2']"). click()
@@ -39,5 +28,3 @@ def verify_email_field(context):
     sleep(2)
 
  ## Or   driver.find_element(By.ID, 'ap_email')     This is it. No assert needed
-
-driver.quit()
