@@ -1,15 +1,6 @@
 from behave import given, when, then
 from selenium.webdriver.common.by import By
 
-#@given('Open Amazon page')
-#def open_amazon(context):
-#  context.driver.get('https: //www.amazon.com/')
-
-
-@when('Click on the cart icon')
-def click_cart_icon(context):
-    context.driver.find_element(By.CSS_SELECTOR, 'span.nav-cart-icon.nav-sprite').click()
-
 
 @then('Verify that Amazon cart is empty')
 def amazon_card_empty(context):

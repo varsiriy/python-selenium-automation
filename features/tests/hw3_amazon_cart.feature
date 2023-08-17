@@ -1,5 +1,5 @@
-# Created by varsi at 8/9/2023
-Feature: Test for amazon cart
+# Created by varsi at 8/14/2023
+Feature: Amazon cart
 
 
   Scenario: Verify that Amazon cart is empty after clicking it

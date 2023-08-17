@@ -3,7 +3,7 @@
  # Your name field = 'ap_customer_name'
  # Email = 'ap_email'
  # Password = 'ap_password'
- # Alert content = 'div.a-alert-content'
+ # Alert content = 'div.auth-inlined-information-message.a-alert-inline-info div.a-alert-content'
  # Re-eneter password = 'ap_password_check'
  # Continue = 'continue'
  # Conditions of use = 'a[href*="ap_register_notification_condition_of_use"]'
