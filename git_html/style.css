@@ -1,0 +1,55 @@
+body {
+    margin: 0px;
+    color: #000000;
+    font-family: Helvetica;
+    font-size: 15px
+    background-image: url('')
+}
+
+/*h1 {*/
+/*    color:red;*/
+/*}*/
+
+div.coffee{
+    background-image: url('bg_coffee.jpg');
+}
+
+div#header {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*div.coffee h2 {*/
+/*    color:white;*/
+/*}*/
+
+/*div.coffee, div#header {*/
+/*    color:red;*/
+/*}*/
+
+div.section, div.coffee {
+    background-color: #FFFFFF
+    padding-top: 10px
+    padding-left: 10px
+    padding-right: 10px
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    background-color: red;
+}
+
+a:active {
+    background-color: black;
+}

@@ -11,6 +11,6 @@ def verify_search_result(context, expected_result):
 
 
 
-@then('Click on the fist product')
+@when('Click on the fist product')
 def click_on_the_product(context):
     context.driver.find_element(By.CSS_SELECTOR, '.a-link-normal.s-no-outline[href*="FWag-Salmon-Sweet-Potato-Recipe"]').click()

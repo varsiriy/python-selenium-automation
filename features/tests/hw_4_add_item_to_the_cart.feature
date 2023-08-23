@@ -5,7 +5,11 @@ Feature: Add item to the cart
   Scenario: Verify that user can add item to the cart
     Given Open Amazon page
     When Search for a dog food
-    Then Click on the fist product
-    Then Click One-time purchase radio btn
-    Then Click Add to Cart btn
+    When Click on the fist product
+    When Store product name
+    When Click One-time purchase radio btn
+    When Click Add to Cart btn
     Then Verify the product is Added to Cart
+    When Open cart page
+    Then Verify cart has 1 item(s)
+    Then Verify cart has correct product

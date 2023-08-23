@@ -2,7 +2,7 @@ from behave import given, when, then
 from selenium.webdriver.common.by import By
 
 
-@then('Verify Sing in page opened')
+@then('Verify Sign in page opened')
 def verify_sign_in_page_opened(context):
     expected_result1 = 'Sign in'
     actual_result1 = context.driver.find_element(By.XPATH, "//h1[@class='a-spacing-small']").text

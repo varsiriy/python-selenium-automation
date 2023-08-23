@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>My First Homepage</title>
+  <link type="text/css" href="style.css" rel="stylesheet">
 </head>
 <body>
-<div>
-    <center>
+<div id="header" class="section">
         <h1>Awesome Homepage</h1>
         <hr>
-        <h3>It Is Good To Be Home</h3>
-    </center>
+        <h4 style="color:green"> It Is Good To Be Home</h4>
 </div>
-<div>
+<p>
+<div class="section">
     <h2>Who am I?</h2>
     <p>
         World_renowned <b>philosopher</b>, <strong>philanthropist</strong>, <i>poet</i>,<em>inventor</em>...
@@ -23,7 +23,8 @@
         <u>Disclaimer</u>: above bio or parts...
     </p>
 </div>
-<div>
+<p>
+<div class="coffee">
     <h2>How To Make coffee</h2>
 
     <h4>What you'll need to brew coffee in a pot:</h4>
@@ -43,7 +44,8 @@
         <li>Measure the ground coffe into the wet filter...</li>
     </ol>
 </div>
-<div>
+<p>
+<div class="section">
     <h2>Best Places For Scuba Diving</h2>
     <center>
         <table cellpadding="15">
@@ -53,9 +55,9 @@
                 <th>The Pacific</th>
             </tr>
             <tr>
-                <td width="400"><img scr="images"></td>
-                <td width="400"><img src="images"></td>
-                <td width="400"><img src="images"></td>
+                <td width="400"><img src="images/pasta.png" width="200" height="200"></td>
+                <td width="400"><img src="images/pasta.png" width="200" height="200"></td>
+                <td width="400"><img src="images/pasta.png" width="200" height="200"></td>
             </tr>
             <tr>
                 <td>The epicentre of the Coral Triangle...</td>
@@ -65,19 +67,21 @@
         </table>
     </center>
 </div>
-<div>
+<p>
+<div class="section">
     <h2>My Favorite Websites</h2>
     <a href="http://careerist.com/">Carrest.com - Get a High-Paying Job</a>
     <br>
     <a href="http://padi.com">Padi.com - Spend MOney on Scuba Diving</a>
 </div>
-<div>
+<p>
+<div class="section">
     <h2>Cive Me Your Feedback</h2>
     <form>
         <table>
             <tr>
                 <td>Name</td>
-                <td><input type="text" name="username"></td>
+                <td><input type="text" name="username" id="input-username"></td>
             </tr>
             <tr>
                 <td>Email</td>
@@ -110,7 +114,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit" value="Send message"></td>
+                <td><input type="submit" value="Send message" id="input-submit"></td>
             </tr>
         </table>
 
