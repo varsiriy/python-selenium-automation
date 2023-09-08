@@ -3,8 +3,10 @@ from pages.base_page import Page
 
 class SearchResultPage(Page):
     SEARCH_RESULT = (By.CSS_SELECTOR, '.a-color-state.a-text-bold')
+    FIRST_PRODUCT = (By.CSS_SELECTOR, 'div[data-asin] a.a-link-normal')
 
-    def verify_search_result(self, expected_text):
-        actual_text = self.find_element(*self.SEARCH_RESULT).text
-        assert actual_text == expected_text, \
-            f'Error, expected {expected_text} did not match {actual_text}'
+    def verify_search_result(self, result):
+        self.verify_text(result, *self.SEARCH_RESULT)
+
+    def click_on_the_product(self):
+        self.click(*self.FIRST_PRODUCT)

@@ -7,16 +7,17 @@ SEARCH_RESULT = (By.CSS_SELECTOR, '.a-color-state.a-text-bold')
 SEARCH_RESULTS = (By.CSS_SELECTOR, '[data-component-type="s-search-result"]')
 PRODUCT_TITLE = (By.CSS_SELECTOR, 'h2 span.a-text-normal')
 PRODUCT_IMG = (By.CSS_SELECTOR, ".s-image[data-image-latency='s-product-image']")
+#FIRST_PRODUCT = (By.CSS_SELECTOR, 'a.a-link-normal.s-no-outline[href*="Amazon-Brand-Food-Salmon-Brown"]')
 
-@then('Verify search results is {expected_result}')
-def verify_search_result(context, expected_result):
-    context.app.search_result_page.verify_search_result(expected_result)
+@then('Verify search results is {result}')
+def verify_search_result(context, result):
+    context.app.search_result_page.verify_search_result(result)
 
 
 
 @when('Click on the fist product')
 def click_on_the_product(context):
-    context.driver.find_element(By.CSS_SELECTOR, '.a-link-normal.s-no-outline[href*="FWag-Salmon-Sweet-Potato-Recipe"]').click()
+    context.app.search_result_page.click_on_the_product()
 
 
 @then('Verify that every product has a name and an image')

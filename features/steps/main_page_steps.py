@@ -15,8 +15,6 @@ SIGNIN_BTN = (By.CSS_SELECTOR, '#nav-signin-tooltip .nav-action-signin-button')
 def open_amazon(context):
     # context.driver.get('https://www.amazon.com/')
     context.app.main_page.open_main()
-    sleep(2)
-    context.driver.refresh()
 
 
 @when('Search for a {product}')
@@ -26,7 +24,7 @@ def search_on_amazon(context, product):
 
 @when('Click orders')
 def click_orders(context):
-    context.driver.find_element(*ORDERS_BTN). click()
+    context.app.header.click_orders()
 
 
 @when('Click on the cart icon')
@@ -36,10 +34,34 @@ def click_cart_icon(context):
 
 @when('Click on button from SignIn popup')
 def click_signin_from_popup(context):
-    context.driver.wait.until(
-        EC.element_to_be_clickable(SIGNIN_BTN),
-        message='SignIn btn from popup not clickable'
-    ).click()
+    # context.driver.wait.until(
+    #     EC.element_to_be_clickable(SIGNIN_BTN),
+    #     message='SignIn btn from popup not clickable'
+    # ).click()
+    context.app.header.click_signin_from_popup()
+
+
+@when('Wait for 3 sec')
+def wait_sec(context):
+    sleep(3)
+
+
+@then('Verify Sign In is clickable')
+def verify_signin_btn_clickable(context):
+    # context.driver.wait.until(
+    #     EC.element_to_be_clickable(SIGNIN_BTN),
+    #     message='SignIn btn from popup not clickable'
+    # )
+    context.app.header.verify_signin_btn_clickable()
+
+
+@then('Verify Sign In disappears')
+def verify_signin_btn_disappears(context):
+    # context.driver.wait.until(
+    #     EC.invisibility_of_element_located(SIGNIN_BTN),
+    #     message='SignIn btn did not disappear'
+    # )
+    context.app.header.verify_signin_btn_disappears()
 
 
 @then('Verify footer has {expected_amount} links')

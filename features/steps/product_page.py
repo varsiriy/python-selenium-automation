@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 #from time import sleep
 from selenium.webdriver.support import expected_conditions as EC
 
-PRODUCT_NAME = (By.ID, 'productTitle')
+FIRST_PRODUCT_NAME = (By.ID, 'title')
 ADD_TO_CART_BTN = (By.ID, "add-to-cart-button")
 COLOR_OPTIONS = (By.CSS_SELECTOR, "#variation_color_name li")
 CURRENT_COLOR = (By.CSS_SELECTOR, "#variation_color_name .selection")
@@ -34,7 +34,7 @@ def added_to_cart(context):
 
 @when ('Store product name')
 def get_product_name(context):
-    context.product_name = context.driver.find_element(*PRODUCT_NAME).text
+    context.product_name = context.driver.find_element(*FIRST_PRODUCT_NAME).text
     print(f'Current product: {context.product_name}')
 
 
