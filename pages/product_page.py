@@ -11,6 +11,7 @@ class ProductPage(Page):
  #       self.verify_text(expected_text,*self.FIRST_PRODUCT_NAME)
 
     def product_name(self):
+        global expected_text
         expected_text = self.find_element(*self.FIRST_PRODUCT_NAME).text
         print(expected_text)
 
@@ -19,4 +20,4 @@ class ProductPage(Page):
 
 
     def verify_cart_has_correct_product(self):
-        self.verify_text(self.expected_text, *self.PRODUCT_NAME)
+        self.verify_text(expected_text, *self.PRODUCT_NAME)
