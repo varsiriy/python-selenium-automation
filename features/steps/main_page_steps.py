@@ -19,11 +19,14 @@ def open_amazon(context):
 
 @when('Search for a {product}')
 def search_on_amazon(context, product):
+    # context.driver.find_element(*SEARCH_FIELD).send_keys(product)
+    # context.driver.find_element(*SEARCH_BTN).click()
     context.app.header.search_product(product)
 
 
 @when('Click orders')
 def click_orders(context):
+    # context.driver.find_element(*ORDERS_BTN).click()
     context.app.header.click_orders()
 
 

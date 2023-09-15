@@ -32,10 +32,10 @@ Feature: Tests for amazon search
 
   Scenario: Verify that user can add item to the cart
     Given Open Amazon page
-    When Search for a dog food
+    When Search for a pen
     When Click on the fist product
     When Store product name
-    When Click One-time purchase radio btn
+#    When Click One-time purchase radio btn
     When Click Add to Cart btn
     Then Verify the product is Added to Cart
     When Open cart page

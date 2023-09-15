@@ -3,10 +3,11 @@ from selenium.webdriver.common.by import By
 #from time import sleep
 from selenium.webdriver.support import expected_conditions as EC
 
-FIRST_PRODUCT_NAME = (By.ID, 'title')
+FIRST_PRODUCT_NAME = (By.ID, 'productTitle')
 ADD_TO_CART_BTN = (By.ID, "add-to-cart-button")
 COLOR_OPTIONS = (By.CSS_SELECTOR, "#variation_color_name li")
 CURRENT_COLOR = (By.CSS_SELECTOR, "#variation_color_name .selection")
+ADDED_TO_CART = (By.CSS_SELECTOR,'span.a-size-medium-plus')
 
 
 @given('Open Amazon product {product_id} page')
@@ -21,21 +22,23 @@ def click_one_time_purchase(context):
 
 @when('Click Add to Cart btn')
 def click_add_to_cart_btn(context):
-    context.driver.find_element(*ADD_TO_CART_BTN).click()
+    # context.driver.find_element(*ADD_TO_CART_BTN).click()
+    context.app.product_page.click_add_to_cart_btn()
 
 
 
 @then('Verify the product is Added to Cart')
 def added_to_cart(context):
-    expected_result = 'Added to Cart'
-    actual_result = context.driver.find_element(By.CSS_SELECTOR,'span.a-size-medium-plus').text
-    assert expected_result == actual_result, f'Error expected {expected_result} did not match actual {actual_result}'
+    # expected_result = 'Added to Cart'
+    # actual_result = context.driver.find_element(*ADDED_TO_CART).text
+    # assert expected_result == actual_result, f'Error expected {expected_result} did not match actual {actual_result}'
+    context.app.shopping_cart.verify_product_added_to_cart()
 
-
-@when ('Store product name')
+@when('Store product name')
 def get_product_name(context):
-    context.product_name = context.driver.find_element(*FIRST_PRODUCT_NAME).text
-    print(f'Current product: {context.product_name}')
+    # context.product_name = context.driver.find_element(*FIRST_PRODUCT_NAME).text
+    # print(f'Current product: {context.product_name}')
+    context.app.product_page.product_name()
 
 
 @then('Verify user can click through colors')

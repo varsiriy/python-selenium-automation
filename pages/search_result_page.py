@@ -3,10 +3,10 @@ from pages.base_page import Page
 
 class SearchResultPage(Page):
     SEARCH_RESULT = (By.CSS_SELECTOR, '.a-color-state.a-text-bold')
-    FIRST_PRODUCT = (By.CSS_SELECTOR, 'div[data-asin] a.a-link-normal')
+    FIRST_PRODUCT = (By.XPATH, "//div[@data-component-type='s-search-result']//a[.//span[@class='a-price']]")
 
-    def verify_search_result(self, result):
-        self.verify_text(result, *self.SEARCH_RESULT)
+    def verify_search_result(self, expected_text):
+        self.verify_text(expected_text, *self.SEARCH_RESULT)
 
     def click_on_the_product(self):
         self.click(*self.FIRST_PRODUCT)

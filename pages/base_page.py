@@ -26,27 +26,26 @@ class Page:
     def wait_for_element_clickable(self, *locator):
         self.wait.until(
             EC.element_to_be_clickable(locator),
-            message='Element not clickable: {locator}'
+            message=f'Element not clickable: {locator}'
         )
 
     def wait_for_element_clickable_click(self, *locator):
         e = self.wait.until(
             EC.element_to_be_clickable(locator),
-            message='Element not clickable: {locator}'
+            message=f'Element not clickable: {locator}'
         )
         e.click()
 
     def wait_for_element_disappear(self, *locator):
         self.wait.until(
             EC.invisibility_of_element_located(locator),
-            message='Element did not disappear: {locator}'
+            message=f'Element did not disappear: {locator}'
         )
 
 
     def verify_text(self, expected_text, *locator):
         actual_text = self.find_element(*locator).text
-        assert actual_text == expected_text, \
-            f'Error, expected {expected_text} did not match {actual_text}'
+        assert expected_text == actual_text, f'Expected {expected_text}, but got {actual_text}'
 
     def verify_partial_text(self, expected_text, *locator):
         actual_text = self.find_element(*locator).text

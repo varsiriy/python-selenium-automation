@@ -7,10 +7,12 @@ SEARCH_RESULT = (By.CSS_SELECTOR, '.a-color-state.a-text-bold')
 SEARCH_RESULTS = (By.CSS_SELECTOR, '[data-component-type="s-search-result"]')
 PRODUCT_TITLE = (By.CSS_SELECTOR, 'h2 span.a-text-normal')
 PRODUCT_IMG = (By.CSS_SELECTOR, ".s-image[data-image-latency='s-product-image']")
-#FIRST_PRODUCT = (By.CSS_SELECTOR, 'a.a-link-normal.s-no-outline[href*="Amazon-Brand-Food-Salmon-Brown"]')
+#FIRST_PRODUCT = (By.XPATH, "//div[@data-component-type='s-search-result']//a[.//span[@class='a-price']]")
 
 @then('Verify search results is {result}')
 def verify_search_result(context, result):
+    # actual_result = context.driver.find_element(*SEARCH_RESULT).text
+    # assert expected_result == actual_result, f'Error, expected {result} but got {actual_result}'
     context.app.search_result_page.verify_search_result(result)
 
 
