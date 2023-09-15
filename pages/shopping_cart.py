@@ -19,5 +19,6 @@ class ShoppingCart(Page):
     def verify_cart_has_correct_count(self, expected_text):
         self.verify_text(expected_text, *self.CART)
 
-    def verify_cart_has_correct_product(self, expected_text):
-        self.verify_text(expected_text, *self.PRODUCT_NAME)
+    #def verify_cart_has_correct_product(self, expected_text):
+     #   self.verify_text(expected_text, *self.PRODUCT_NAME)
+      #  self.product_name()

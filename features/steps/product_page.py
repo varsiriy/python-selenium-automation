@@ -41,6 +41,7 @@ def get_product_name(context):
     context.app.product_page.product_name()
 
 
+
 @then('Verify user can click through colors')
 def verify_can_click_colors(context):
     expected_colors = ['Army Green', 'Black', 'Blue']

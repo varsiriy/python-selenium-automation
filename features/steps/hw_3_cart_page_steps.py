@@ -31,5 +31,5 @@ def verify_cart_count(context, expected_count):
 def verify_product_name(context):
     # actual_name = context.driver.find_element(*PRODUCT_NAME).text
     # assert context.product_name[:35] in actual_name, f'Expected {context.product_name} but got {actual_name}'
-    context.app.shopping_cart.verify_cart_has_correct_product()
+    context.app.product_page.verify_cart_has_correct_product()
 
