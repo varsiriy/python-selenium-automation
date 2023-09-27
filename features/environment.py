@@ -53,8 +53,6 @@ def browser_init(context, scenario_name):
 
 def before_scenario(context, scenario):
     print('\nStarted scenario: ', scenario.name)
-    browser_init(context)
-    # Pass scenario.name to init() for browserstack config:
     browser_init(context, scenario.name)
 
 
