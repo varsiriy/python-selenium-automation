@@ -1,6 +1,6 @@
 from behave import given, when, then
 from selenium.webdriver.common.by import By
-#from time import sleep
+from time import sleep
 from selenium.webdriver.support import expected_conditions as EC
 
 FIRST_PRODUCT_NAME = (By.ID, 'productTitle')
@@ -13,6 +13,8 @@ ADDED_TO_CART = (By.CSS_SELECTOR,'span.a-size-medium-plus')
 @given('Open Amazon product {product_id} page')
 def open_amazon_product(context, product_id):
     context.driver.get(f'https://www.amazon.com/dp/{product_id}/')
+    # sleep(2)
+    # context.driver.refresh()
 
 
 @when ('Click One-time purchase radio btn')
