@@ -23,5 +23,5 @@ class Application:
         self.product_page = ProductPage(driver)
         self.bestsellers_page = BestsellersPage(driver)
         self.amazon_t_and_c_page = TermsAndConditionsPage(driver)
-        self.privacy_notice_page = PrivacyNoticePage
+        self.privacy_notice_page = PrivacyNoticePage(driver)
 
