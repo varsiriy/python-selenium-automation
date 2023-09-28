@@ -6,13 +6,13 @@ from selenium.webdriver.support.wait import WebDriverWait
 from app.application import Application
 
 
-
 def browser_init(context, scenario_name):
     """
+    :param scenario_name:
     :param context: Behave context
     """
-    # service = Service(executable_path=r'C:\Users\varsi\python-selenium-automation\chromedriver.exe')
-    # context.driver = webdriver.Chrome(service=service)
+    service = Service(executable_path=r'C:\Users\varsi\python-selenium-automation\chromedriver.exe')
+    context.driver = webdriver.Chrome(service=service)
 
     ### OTHER BROWSERS ###
     # service = Service(executable_path=r'C:\Users\varsi\python-selenium-automation\geckodriver.exe')
@@ -29,20 +29,19 @@ def browser_init(context, scenario_name):
     # )
 
     ### BROWSERSTACK ###
-    bs_user = 'vladarsiriy_8uLida'
-    bs_key = 'zm6PCPzbGTuRNMdyjo2L'
-    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
-
-    options = Options()
-    bstack_options = {
-        'os': 'Windows',
-        'osVersion': '10',
-        'browserName': 'Firefox',
-        'sessionName': scenario_name
-    }
-    options.set_capability('bstack:options', bstack_options)
-    context.driver = webdriver.Remote(command_executor=url, options=options)
-
+    # bs_user = 'vladarsiriy_8uLida'
+    # bs_key = 'zm6PCPzbGTuRNMdyjo2L'
+    # url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    #
+    # options = Options()
+    # bstack_options = {
+    #     'os': 'Windows',
+    #     'osVersion': '10',
+    #     'browserName': 'Firefox',
+    #     'sessionName': scenario_name
+    # }
+    # options.set_capability('bstack:options', bstack_options)
+    # context.driver = webdriver.Remote(command_executor=url, options=options)
 
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)

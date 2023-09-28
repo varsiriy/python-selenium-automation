@@ -7,6 +7,8 @@ from pages.signin_page import SignInPage
 from pages.shopping_cart import ShoppingCart
 from pages.product_page import ProductPage
 from pages.bestsellers_page import BestsellersPage
+from pages.amazon_t_and_c_page import TermsAndConditionsPage
+from pages.privacy_notice_page import PrivacyNoticePage
 
 class Application:
 
@@ -20,4 +22,6 @@ class Application:
         self.shopping_cart = ShoppingCart(driver)
         self.product_page = ProductPage(driver)
         self.bestsellers_page = BestsellersPage(driver)
+        self.amazon_t_and_c_page = TermsAndConditionsPage(driver)
+        self.privacy_notice_page = PrivacyNoticePage
 
