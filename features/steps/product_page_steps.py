@@ -87,4 +87,4 @@ def verify_can_select_colors(context):
 
 @then('Verify that user can see the deals')
 def verify_deals(context):
-    context.app.verify_deals()
+    context.app.product_page.verify_deals()
