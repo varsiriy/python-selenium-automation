@@ -17,7 +17,7 @@ def open_amazon(context):
     context.app.main_page.open_main()
 
 
-@when('Search for a {product}')
+@when('Search for {product}')
 def search_on_amazon(context, product):
     # context.driver.find_element(*SEARCH_FIELD).send_keys(product)
     # context.driver.find_element(*SEARCH_BTN).click()
@@ -49,6 +49,16 @@ def wait_sec(context):
     sleep(3)
 
 
+@when('Hover over language options')
+def hover_lang(context):
+    context.app.header.hover_lang()
+
+
+@when('Select department by alias {dept}')
+def select_dept(context, dept):
+    context.app.header.select_dept(dept)
+
+
 @then('Verify Sign In is clickable')
 def verify_signin_btn_clickable(context):
     # context.driver.wait.until(
@@ -78,3 +88,13 @@ def verify_link_amount(context, expected_amount):
 def verify_many_links(context):
     links = context.driver.find_elements(*FOOTER_LINKS)
     assert len(links) > 1
+
+
+@then('Verify Spanish option present')
+def verify_spanish_lang(context):
+    context.app.header.verify_spanish_lang()
+
+
+@then('Verify {dept} department is selected')
+def verify_dept_selected(context, dept):
+    context.app.header.verify_dept_selected(dept)

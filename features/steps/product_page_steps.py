@@ -17,7 +17,12 @@ def open_amazon_product(context, product_id):
     # context.driver.refresh()
 
 
-@when ('Click One-time purchase radio btn')
+@given('Open Amazon Fashion product page')
+def open_amazon_fashion_product(context):
+    context.driver.get('https://www.amazon.com/gp/product/B074TBCSC8')
+
+
+@when('Click One-time purchase radio btn')
 def click_one_time_purchase(context):
     context.driver.find_element(By.CSS_SELECTOR, 'i.a-icon.a-accordion-radio.a-icon-radio-inactive').click()
 
@@ -27,6 +32,10 @@ def click_add_to_cart_btn(context):
     # context.driver.find_element(*ADD_TO_CART_BTN).click()
     context.app.product_page.click_add_to_cart_btn()
 
+
+@when('Hover over New Arrivals')
+def hover_new_arrivals(context):
+    context.app.product_page.hover_new_arrivals()
 
 
 @then('Verify the product is Added to Cart')
@@ -74,3 +83,8 @@ def verify_can_select_colors(context):
         actual_colors.append(current_color)
 
     assert actual_colors == expected_colors, f'Expected {expected_colors} did not match actual {actual_colors}'
+
+
+@then('Verify that user can see the deals')
+def verify_deals(context):
+    context.app.verify_deals()
