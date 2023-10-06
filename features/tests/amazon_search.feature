@@ -1,6 +1,4 @@
-# Created by varsi at 8/8/2023
 Feature: Tests for amazon search
-  # Enter feature description here
 
   Scenario: Verify that a user can search for a table
     Given Open Amazon page
@@ -11,15 +9,15 @@ Feature: Tests for amazon search
 #    Given Open Amazon page
 #    When Search for a cup
 #    Then Verify search results is "cup"
-#
-#  Scenario: Verify that a user can search for a dress
-#    Given Open Amazon page
-#    When Search for a dress
-#    Then Verify search results is "dress"
+  @smoke
+  Scenario: Verify that a user can search for a tea
+    Given Open Amazon page
+    When Search for tea
+    Then Verify search results is "tea"
 
   Scenario Outline: Verify that a user can search for a product
     Given Open Amazon page
-    When Search for a <search_word>
+    When Search for <search_word>
     Then Verify search results is <search_result>
     Examples:
     |search_word      |search_result    |
@@ -29,7 +27,7 @@ Feature: Tests for amazon search
     |coffee           |"coffee"         |
     |forks            |"forks"          |
 
-
+  @smoke
   Scenario: Verify that user can add item to the cart
     Given Open Amazon page
     When Search for a pen

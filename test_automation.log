@@ -1,0 +1,90 @@
+2023-10-04 11:54:34,928 - support.logger - INFO - Opening https://www.amazon.com/
+2023-10-04 11:54:41,164 - support.logger - INFO - Clicking on ('id', 'nav-search-submit-button')
+2023-10-04 13:33:22,318 - support.logger - INFO - Opening https://www.amazon.com/
+2023-10-04 13:33:25,123 - support.logger - INFO - Searching for ('id', 'twotabsearchtextbox')
+2023-10-04 13:33:27,472 - support.logger - INFO - Inputting text: "tea"
+2023-10-04 13:33:27,744 - support.logger - INFO - Clicking on ('id', 'nav-search-submit-button')
+2023-10-04 13:33:33,386 - support.logger - INFO - Searching for ('css selector', '.a-color-state.a-text-bold')
+2023-10-04 13:42:57,902 - support.logger - INFO - 
+Started scenario: Verify that a user can search for a tea
+2023-10-04 13:42:59,401 - support.logger - INFO - Started step: <given "Open Amazon page">
+2023-10-04 13:42:59,402 - support.logger - INFO - Opening https://www.amazon.com/
+2023-10-04 13:43:04,272 - support.logger - INFO - Started step: <when "Search for tea">
+2023-10-04 13:43:04,274 - support.logger - INFO - Searching for ('id', 'twotabsearchtextbox')
+2023-10-04 13:43:05,938 - support.logger - INFO - Inputting text: "tea"
+2023-10-04 13:43:06,095 - support.logger - INFO - Clicking on ('id', 'nav-search-submit-button')
+2023-10-04 13:43:09,218 - support.logger - INFO - Started step: <then "Verify search results is "tea"">
+2023-10-04 13:43:09,220 - support.logger - INFO - Searching for ('css selector', '.a-color-state.a-text-bold')
+2023-10-04 14:06:28,931 - support.logger - INFO - 
+Started scenario: Bestsellers links can be opened
+2023-10-04 14:06:30,393 - support.logger - INFO - Started step: <given "Open Amazon Bestsellers">
+2023-10-04 14:06:31,942 - support.logger - INFO - Opening URL https://www.amazon.com/gp/bestsellers/
+2023-10-04 14:06:33,983 - support.logger - INFO - Started step: <then "User can click through top links and verify correct page opens">
+2023-10-04 14:06:35,754 - support.logger - INFO - Searching for ('css selector', '#zg_banner_text')
+2023-10-04 14:06:37,111 - support.logger - INFO - Searching for ('css selector', '#zg_banner_text')
+2023-10-04 14:06:38,244 - support.logger - INFO - Searching for ('css selector', '#zg_banner_text')
+2023-10-04 14:06:39,408 - support.logger - INFO - Searching for ('css selector', '#zg_banner_text')
+2023-10-04 14:06:40,953 - support.logger - INFO - Searching for ('css selector', '#zg_banner_text')
+2023-10-04 14:27:21,270 - support.logger - INFO - 
+Started scenario: Verify that footer has correct amount of links
+2023-10-04 14:27:23,161 - support.logger - INFO - Started step: <given "Open Amazon page">
+2023-10-04 14:27:25,659 - support.logger - INFO - Opening URL https://www.amazon.com/
+2023-10-04 14:27:27,707 - support.logger - INFO - Started step: <then "Verify footer has 35 links">
+2023-10-04 14:27:31,804 - support.logger - INFO - 
+Started scenario: Verify that footer has many of links
+2023-10-04 14:27:33,274 - support.logger - INFO - Started step: <given "Open Amazon page">
+2023-10-04 14:27:34,109 - support.logger - INFO - Opening URL https://www.amazon.com/
+2023-10-04 14:27:36,127 - support.logger - INFO - Started step: <then "Verify many links are shown in the footer">
+2023-10-04 14:27:40,842 - support.logger - INFO - 
+Started scenario: User can see language options
+2023-10-04 14:27:42,539 - support.logger - INFO - Started step: <given "Open Amazon page">
+2023-10-04 14:27:44,958 - support.logger - INFO - Opening URL https://www.amazon.com/
+2023-10-04 14:27:47,015 - support.logger - ERROR - Step failed: <given "Open Amazon page">
+2023-10-04 14:33:00,659 - support.logger - INFO - 
+Started scenario: Verify that a user can search for a tea
+2023-10-04 14:33:02,161 - support.logger - INFO - Started step: <given "Open Amazon page">
+2023-10-04 14:33:04,895 - support.logger - INFO - Opening URL https://www.amazon.com/
+2023-10-04 14:33:06,945 - support.logger - INFO - Started step: <when "Search for tea">
+2023-10-04 14:33:06,946 - support.logger - INFO - Searching for ('id', 'twotabsearchtextbox')
+2023-10-04 14:33:08,421 - support.logger - INFO - Inputting text: "tea"
+2023-10-04 14:33:08,571 - support.logger - INFO - Clicking on ('id', 'nav-search-submit-button')
+2023-10-04 14:33:10,994 - support.logger - INFO - Started step: <then "Verify search results is "tea"">
+2023-10-04 14:33:10,995 - support.logger - INFO - Searching for ('css selector', '.a-color-state.a-text-bold')
+2023-10-04 14:33:13,508 - support.logger - INFO - 
+Started scenario: Verify that user can add item to the cart
+2023-10-04 14:33:14,940 - support.logger - INFO - Started step: <given "Open Amazon page">
+2023-10-04 14:33:17,625 - support.logger - INFO - Opening URL https://www.amazon.com/
+2023-10-04 14:33:19,666 - support.logger - INFO - Started step: <when "Search for a pen">
+2023-10-04 14:33:19,667 - support.logger - INFO - Searching for ('id', 'twotabsearchtextbox')
+2023-10-04 14:33:20,969 - support.logger - INFO - Inputting text: "a pen"
+2023-10-04 14:33:21,484 - support.logger - INFO - Clicking on ('id', 'nav-search-submit-button')
+2023-10-04 14:33:23,925 - support.logger - INFO - Started step: <when "Click on the fist product">
+2023-10-04 14:33:23,926 - support.logger - INFO - Clicking on ('xpath', "//div[@data-component-type='s-search-result']//a[.//span[@class='a-price']]")
+2023-10-04 14:33:29,250 - support.logger - INFO - Started step: <when "Store product name">
+2023-10-04 14:33:29,251 - support.logger - INFO - Searching for ('id', 'productTitle')
+2023-10-04 14:33:29,376 - support.logger - INFO - Started step: <when "Click Add to Cart btn">
+2023-10-04 14:33:29,377 - support.logger - INFO - Clicking on ('id', 'add-to-cart-button')
+2023-10-04 14:33:31,844 - support.logger - INFO - Started step: <then "Verify the product is Added to Cart">
+2023-10-04 14:33:31,845 - support.logger - INFO - Searching for ('css selector', 'span.a-size-medium-plus')
+2023-10-04 14:33:31,929 - support.logger - INFO - Started step: <when "Open cart page">
+2023-10-04 14:33:32,974 - support.logger - INFO - Started step: <then "Verify cart has 1 item(s)">
+2023-10-04 14:33:32,975 - support.logger - INFO - Searching for ('id', 'nav-cart-count')
+2023-10-04 14:33:33,002 - support.logger - INFO - Started step: <then "Verify cart has correct product">
+2023-10-04 14:33:33,003 - support.logger - INFO - Searching for ('css selector', '#sc-active-cart li')
+2023-10-04 14:33:35,494 - support.logger - INFO - 
+Started scenario: Sign In page can be opened from SignIn popup
+2023-10-04 14:33:36,932 - support.logger - INFO - Started step: <given "Open Amazon page">
+2023-10-04 14:33:39,927 - support.logger - INFO - Opening URL https://www.amazon.com/
+2023-10-04 14:33:41,975 - support.logger - INFO - Started step: <when "Click on button from SignIn popup">
+2023-10-04 14:33:44,383 - support.logger - INFO - Started step: <then "Verify Sign in page opened">
+2023-10-04 14:33:44,384 - support.logger - INFO - Searching for ('xpath', "//h1[@class='a-spacing-small']")
+2023-10-04 18:58:59,455 - support.logger - INFO - 
+Started scenario: Bestsellers links can be opened
+2023-10-04 18:59:01,242 - support.logger - INFO - Started step: <given "Open Amazon Bestsellers">
+2023-10-04 18:59:10,360 - support.logger - INFO - Opening URL https://www.amazon.com/gp/bestsellers/
+2023-10-04 18:59:12,400 - support.logger - INFO - Started step: <then "User can click through top links and verify correct page opens">
+2023-10-04 18:59:14,184 - support.logger - INFO - Searching for ('css selector', '#zg_banner_text')
+2023-10-04 18:59:15,348 - support.logger - INFO - Searching for ('css selector', '#zg_banner_text')
+2023-10-04 18:59:16,578 - support.logger - INFO - Searching for ('css selector', '#zg_banner_text')
+2023-10-04 18:59:17,816 - support.logger - INFO - Searching for ('css selector', '#zg_banner_text')
+2023-10-04 18:59:19,406 - support.logger - INFO - Searching for ('css selector', '#zg_banner_text')

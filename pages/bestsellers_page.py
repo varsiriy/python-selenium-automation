@@ -9,9 +9,10 @@ class BestsellersPage(Page):
     HEADER = (By.CSS_SELECTOR, '#zg_banner_text')
 
     def open_bestsellers(self):
-        self.driver.get('https://www.amazon.com/gp/bestsellers/')
-        sleep(2)
-        self.driver.refresh()
+        # self.driver.get('https://www.amazon.com/gp/bestsellers/')
+        # sleep(2)
+        # self.driver.refresh()
+        self.open_url('gp/bestsellers/')
 
     def click_thru_top_links(self):
         top_links = self.find_elements(*self.TOP_LINKS)

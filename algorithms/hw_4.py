@@ -36,7 +36,7 @@ print(sum_between_range(test_arr, min_val, max_val))
  # Increment a Number. nonnegative decimal integer D and updates the list to represent the integer D + 1.
  # For example, if the input is [1, 2, 9] then you should update the list to [1, 3, 0].
 
-def plus_one(arr: list):
+def plus_one(arr: list): 
     arr[-1] += 1
 
     for i in reversed(range(1, len(arr))):
